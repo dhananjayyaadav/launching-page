@@ -1,11 +1,11 @@
-import { useState } from "react";
-import emailjs from "emailjs-com";
-import React from "react";
+import { useState } from 'react';
+import emailjs from 'emailjs-com';
+import React from 'react';
 
 const initialState = {
-  name: "",
-  email: "",
-  message: "",
+  name: '',
+  email: '',
+  message: '',
 };
 export const Contact = (props) => {
   const [{ name, email, message }, setState] = useState(initialState);
@@ -20,7 +20,7 @@ export const Contact = (props) => {
     e.preventDefault();
     console.log(name, email, message);
     emailjs
-      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", e.target, "YOUR_USER_ID")
+      .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID')
       .then(
         (result) => {
           console.log(result.text);
@@ -83,8 +83,7 @@ export const Contact = (props) => {
                     rows="4"
                     placeholder="Message"
                     required
-                    onChange={handleChange}
-                  ></textarea>
+                    onChange={handleChange}></textarea>
                   <p className="help-block text-danger"></p>
                 </div>
                 <div id="success"></div>
@@ -101,23 +100,23 @@ export const Contact = (props) => {
                 <span>
                   <i className="fa fa-map-marker"></i> Address
                 </span>
-                {props.data ? props.data.address : "loading"}
+                {props.data ? props.data.address : 'loading'}
               </p>
             </div>
             <div className="contact-item">
               <p>
                 <span>
                   <i className="fa fa-phone"></i> Phone
-                </span>{" "}
-                {props.data ? props.data.phone : "loading"}
+                </span>{' '}
+                {props.data ? props.data.phone : 'loading'}
               </p>
             </div>
             <div className="contact-item">
               <p>
                 <span>
                   <i className="fa fa-envelope-o"></i> Email
-                </span>{" "}
-                {props.data ? props.data.email : "loading"}
+                </span>{' '}
+                {props.data ? props.data.email : 'loading'}
               </p>
             </div>
           </div>
@@ -126,17 +125,17 @@ export const Contact = (props) => {
               <div className="social">
                 <ul>
                   <li>
-                    <a href={props.data ? props.data.facebook : "/"}>
+                    <a href={props.data ? props.data.facebook : '/'}>
                       <i className="fa fa-facebook"></i>
                     </a>
                   </li>
                   <li>
-                    <a href={props.data ? props.data.twitter : "/"}>
+                    <a href={props.data ? props.data.twitter : '/'}>
                       <i className="fa fa-twitter"></i>
                     </a>
                   </li>
                   <li>
-                    <a href={props.data ? props.data.youtube : "/"}>
+                    <a href={props.data ? props.data.youtube : '/'}>
                       <i className="fa fa-youtube"></i>
                     </a>
                   </li>
@@ -149,7 +148,7 @@ export const Contact = (props) => {
       <div id="footer">
         <div className="container text-center">
           <p>
-            &copy; 2023 Issaaf Kattan React Land Page Template. Design by{" "}
+            &copy; 2023 Issaaf Kattan React Land Page Template. Design by{' '}
             <a href="http://www.templatewire.com" rel="nofollow">
               TemplateWire
             </a>
